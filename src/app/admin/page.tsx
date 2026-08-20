@@ -6,7 +6,7 @@ import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 import PhotoForm from '@/components/PhotoForm'
 import TimelineForm from '@/components/TimelineForm'
-import { FaTrash, FaEdit } from 'react-icons/fa6'
+import { FaTrash, FaPencil } from 'react-icons/fa6'
 
 interface ContactSubmission {
   id: string
@@ -209,7 +209,7 @@ export default function AdminDashboard() {
                             onClick={() => openPhotoForm(photo)}
                             className="glass-button p-2 text-white hover:bg-amber-500/20"
                           >
-                            <FaEdit size={16} />
+                            <FaPencil size={16} />
                           </button>
                           <button
                             onClick={() => handleDeletePhoto(photo.id)}
@@ -258,7 +258,7 @@ export default function AdminDashboard() {
                                 onClick={() => openTimelineForm(item)}
                                 className="glass-button p-2 text-white hover:bg-amber-500/20"
                               >
-                                <FaEdit size={16} />
+                                <FaPencil size={16} />
                               </button>
                               <button
                                 onClick={() => handleDeleteTimeline(item.id)}
